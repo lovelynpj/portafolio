@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedro Pimentel — Portafolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="./img/PP.jpg">
+  <!-- Font Awesome (íconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===================================================
+     NAVBAR
+==================================================== -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#hero" class="nav-logo">PP<span> :)</span></a>
+
+    <!-- Links desktop -->
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <!-- Botón hamburguesa (mobile) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Menú desplegable mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about"    onclick="closeMenu()">Sobre mí</a>
+    <a href="#skills"   onclick="closeMenu()">Habilidades</a>
+    <a href="#projects" onclick="closeMenu()">Proyectos</a>
+    <a href="#contact"  onclick="closeMenu()">Contacto</a>
+  </div>
+</nav>
+
+<!-- ===================================================
+     HERO
+==================================================== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <!-- Badge superior -->
+      <div class="hero-eyebrow">
+        <i class="fas fa-circle"></i> Disponible para colaborar
+      </div>
+
+      <!-- Nombre -->
+      <h1 class="hero-name">
+        Pedro<br><span class="highlight">Pimentel.</span>
+      </h1>
+
+      <!-- Texto animado -->
+      <p class="hero-role">
+        <span id="typed"></span><span class="typed-cursor">|</span>
+      </p>
+
+      <!-- Descripción breve -->
+      <p class="hero-desc">
+        Estudiante de programación apasionado por la tecnología, el desarrollo
+        de software y la cyberseguridad. Estudiando en Córdoba, Argentina.
+      </p>
+
+      <!-- Botones CTA -->
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-folder-open"></i> Ver proyectos
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Contactarme
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Indicador de scroll -->
+  <div class="hero-scroll">
+    <span></span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================================================
+     SOBRE MÍ
+==================================================== -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="section-label reveal">
+      <i class="fas fa-user-circle"></i> &nbsp;Sobre mí
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Avatar / foto -->
+      <div class="about-avatar-wrap reveal-left">
+        <div style="position:relative;">
+          <div class="about-avatar">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="about-deco"></div>
+          <div class="about-deco2"></div>
+        </div>
+      </div>
+
+      <!-- Texto e info -->
+      <div class="reveal-right">
+        <h2 class="section-title">Hola! soy <span>Pedro</span> 👋</h2>
+
+        <p style="color:var(--muted); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.2rem;">
+          Tengo 17 años y estoy cursando 6to año de programación, en un colegio técnico en
+          Córdoba Capital. Me encanta crear cosas con código, aprender constantemente
+          y explorar cómo la tecnología puede resolver problemas reales.
+        </p>
+        <p style="color:var(--muted); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.6rem;">
+          Más allá del teclado, me apasiona la fotografía, la moda y disfruto jugar
+          juegos online y hago gimnasio en mi dia a dia. Creo que la curiosidad y la constancia
+          son las mejores herramientas de cualquier programador.
+        </p>
+
+        <!-- Datos personales -->
+        <ul class="about-info">
+          <li>
+            <i class="fas fa-birthday-cake"></i>
+            <span><strong>21 de julio, 2008</strong> — Córdoba, Argentina</span>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span><strong>Córdoba Capital</strong>, Argentina</span>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <span>Estudiante de <strong>Programación</strong> — Colegio "IPET 57"</span>
+          </li>
+        </ul>
+
+        <!-- Hobbies / chips -->
+        <div class="about-tags">
+          <span class="tag"><i class="fas fa-camera"></i> Fotografía</span>
+          <span class="tag"><i class="fas fa-camera"></i> Moda</span>
+          <span class="tag"><i class="fas fa-gamepad"></i> Videojuegos</span>
+          <span class="tag"><i class="fas fa-basketball-ball"></i> Gimnasio</span>
+          <span class="tag"><i class="fas fa-microchip"></i> Tecnología</span>
+          <span class="tag"><i class="fas fa-book-open"></i> Aprendizaje continuo</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     HABILIDADES
+==================================================== -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <div class="skills-header">
+      <div class="section-label reveal"><i class="fas fa-terminal"></i> &nbsp;Habilidades</div>
+      <h2 class="section-title reveal">Stack <span>tecnológico</span></h2>
+      <p class="section-sub reveal">Lenguajes y tecnologías que utilizo para construir proyectos reales.</p>
+    </div>
+
+    <!-- data-bar = porcentaje de la barra animada (leído desde main.js) -->
+    <div class="skills-grid">
+
+      <div class="skill-card reveal" data-bar="85">
+        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+        <div>
+          <div class="skill-name">HTML</div>
+          <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+          <div class="skill-level">Avanzado</div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-bar="78" style="transition-delay:.08s">
+        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+        <div>
+          <div class="skill-name">CSS</div>
+          <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+          <div class="skill-level">Avanzado</div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-bar="70" style="transition-delay:.16s">
+        <div class="skill-icon"><i class="fab fa-js"></i></div>
+        <div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+          <div class="skill-level">Intermedio</div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-bar="75" style="transition-delay:.24s">
+        <div class="skill-icon"><i class="fab fa-python"></i></div>
+        <div>
+          <div class="skill-name">Python</div>
+          <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+          <div class="skill-level">Intermedio</div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-bar="80" style="transition-delay:.32s">
+        <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+        <div>
+          <div class="skill-name">Flet</div>
+          <div class="skill-bar-wrap"><div class="skill-bar"></div></div>
+          <div class="skill-level">Avanzado</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     PROYECTOS
+==================================================== -->
+<section id="projects" class="section">
+  <div class="container">
+
+    <div class="section-label reveal"><i class="fas fa-rocket"></i> &nbsp;Proyectos</div>
+    <h2 class="section-title reveal">Lo que he <span>construido</span></h2>
+    <p class="section-sub reveal">Proyectos personales que reflejan mi pasión por el desarrollo de software.</p>
+
+    <div class="projects-grid">
+
+      <!-- Proyecto: Encripted -->
+      <div class="project-card reveal">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-lock"></i></div>
+          <div class="project-links">
+            <a href="#" class="project-link" title="Código fuente">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-badge">Proyecto principal</span>
+          <h3 class="project-title">Encripted</h3>
+          <p class="project-desc">
+            Aplicación de encriptación y desencriptación de archivos, creada
+            para mejorar la seguridad de la información personal. Un proyecto
+            de aprendizaje profundo sobre criptografía y desarrollo de software
+            con Python y Flet.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flet</span>
+            <span class="tech-tag">Criptografía</span>
+            <span class="tech-tag">Desktop App</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-lock"></i></div>
+          <div class="project-links">
+            <a href="#" class="project-link" title="Código fuente">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-badge">Proyecto Secundario</span>
+          <h3 class="project-title">Hotel Coflita 2.4</h3>
+          <p class="project-desc">
+            Aplicación de simulacion de pagina hotelera, con controlamiento y mejorando
+            funciones de manejo de menu para que el usuario seleccione lo que quiera
+            desde su comodidad sin necesidad de una llamada al servicio del hotel. Desarrollo de software
+            con Python y Flet.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flet</span>
+            <span class="tech-tag">Desktop App</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-lock"></i></div>
+          <div class="project-links">
+            <a href="#" class="project-link" title="Código fuente">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-badge">Proyecto Secundario</span>
+          <h3 class="project-title">Scrum Google Maps</h3>
+          <p class="project-desc">
+            Aplicación de Scrum, sirve para guardar datos de cualquier cosa que
+            desees buscar con respecto a lugares, ya sea en tu ciudad o incluso
+            en otros paises, con esta misma app podes buscar "restaurantes" y 
+            ella misma te crea archivos en los cuales la informacion de tu busqueda 
+            queda registrada en esos archivos de tipo .txt, .json y hasta .xlxs (Excel). 
+            desarrollo de software con Python y Flet.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flet</span>
+            <span class="tech-tag">Scrum</span>
+            <span class="tech-tag">Desktop App</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder -->
+      <div class="project-card placeholder reveal" style="transition-delay:.1s">
+        <div class="placeholder-inner">
+          <i class="fas fa-plus-circle"></i>
+          <p>Próximo proyecto<br><small>En desarrollo...</small></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     CONTACTO
+==================================================== -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <div class="section-label reveal"><i class="fas fa-envelope"></i> &nbsp;Contacto</div>
+    <h2 class="section-title reveal">Hablemos <span>juntos</span></h2>
+    <p class="section-sub reveal">¿Tenés un proyecto o querés colaborar? No dudes en escribirme.</p>
+
+    <div class="contact-wrap">
+
+      <!-- Info -->
+      <div class="reveal-left">
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-label">Ubicación</div>
+            <div class="contact-value">Córdoba Capital, Argentina</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <div class="contact-label">Institución</div>
+            <div class="contact-value">Colegio Técnico IPET 57 — Programación</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-globe"></i></div>
+          <div>
+            <div class="contact-label">Idiomas</div>
+            <div class="contact-value">Español - Ingles</div>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div style="margin-top:2rem;">
+          <p style="color:var(--muted); font-size:.9rem; margin-bottom:1rem;">Seguime en redes</p>
+          <div style="display:flex; gap:.7rem;">
+            <a href="https://github.com/lovelynpj" class="footer-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pedro-jose-pimentel-quiroz-8067b7379/" class="footer-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/pedrooquirozz/" class="footer-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Formulario -->
+      <div class="reveal-right">
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Nombre</label>
+              <input type="text" id="fname" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="tu@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fsubject">Asunto</label>
+            <input type="text" id="fsubject" placeholder="¿De qué se trata?" />
+          </div>
+
+          <div class="form-group">
+            <label for="fmsg">Mensaje</label>
+            <textarea id="fmsg" placeholder="Escribí tu mensaje aquí..." required></textarea>
+          </div>
+
+          <div id="form-msg"></div>
+
+          <div class="form-submit-wrap">
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Enviar mensaje
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     FOOTER
+==================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">Pedro Pimentel<span>.</span></div>
+    <div class="footer-links">
+      <a href="https://github.com/lovelynpj" class="footer-link"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/pedro-jose-pimentel-quiroz-8067b7379/" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/pedrooquirozz/" class="footer-link"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>© 2024 Pedro Jose Pimentel Quiroz — Córdoba, Argentina</p>
+  </div>
+</footer>
+
+<!-- Script al final del body para mejor rendimiento -->
+<script src="main.js"></script>
+
+</body>
+</html>
