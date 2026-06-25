@@ -89,25 +89,3 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealElements.forEach(el => revealObserver.observe(el));
-
-
-/* ===== FORMULARIO DE CONTACTO (simulado) ===== */
-const contactForm = document.getElementById('contactForm');
-const formMsg     = document.getElementById('form-msg');
-
-contactForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  // Muestra mensaje de éxito
-  formMsg.textContent = '✅ ¡Mensaje enviado con éxito! Te responderé pronto.';
-  formMsg.className   = 'success';
-
-  // Resetea el formulario
-  this.reset();
-
-  // Oculta el mensaje después de 5 segundos
-  setTimeout(() => {
-    formMsg.style.display = 'none';
-    formMsg.className = '';
-  }, 5000);
-});
